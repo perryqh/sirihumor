@@ -11,9 +11,8 @@ describe "Posts" do
     end
 
     it "displays posts" do
-      within(:css, 'tbody') {
-        page.should have_content(@post.name)
-        page.should have_content(@post_2.name)
+      within(:css, '#content') {
+        page.should have_css('img.screenshot')
       }
     end
   end
