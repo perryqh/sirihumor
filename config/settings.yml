@@ -1,0 +1,11 @@
+defaults: &defaults
+  attachment_email: 8ed59fd2f47febe02622@cloudmailin.net
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
