@@ -5,6 +5,7 @@ guard 'spork', :rspec => true, :wait => 30  do
   watch(%r{^config/environments/.*\.rb$})
   watch(%r{^config/initializers/.*\.rb$})
   watch('spec/spec_helper.rb')
+  watch('spec/factories.rb')
   watch(%r{^spec/support/.+\.rb$})
 end
 
