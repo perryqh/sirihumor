@@ -1,20 +1,23 @@
 !!!
 %html
   %head
-    %title= "Siri Humor | Funny things Siri says"
+    %title= "Siri Humor - Funny things Siri says"
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
   %body
-    -#.topbar
+    .topbar
       .topbar-inner
         .container
-          %h2= link_to "Siri Humor", root_url 
+          %h1
+            = link_to('Siri Humor - Funny things Siri says', root_url)
     .container
       #content= yield
       .push
 
     %footer
-      
+      %h2 
+        Email your own screenshots as an attachment to 
+        = mail_to '8ed59fd2f47febe02622@cloudmailin.net'
       

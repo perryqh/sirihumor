@@ -4,7 +4,7 @@ describe "Posts" do
 
   describe "GET /posts" do
     before(:each) do
-      @post   = Factory.create(:post)
+      @post   = Factory.create(:post, :active => true)
       @post_2 = Factory.create(:post)
 
       visit '/'
