@@ -9,6 +9,8 @@ gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-boots
 gem 'less-rails',              '>= 2.0.1'
 gem 'pg',                      '0.11.0'
 gem 'carrierwave',             '~> 0.5.7'
+gem 'fog',                     '~> 1.0'
+gem 'rmagick',                 '~> 2.13.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
