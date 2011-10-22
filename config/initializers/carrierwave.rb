@@ -12,9 +12,10 @@ else
       :aws_secret_access_key  => ENV['S3_SECRET'],       # required
       #:region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
     }
-    config.fog_directory  = "sirihumor-#{Rails.env}"                     # required
-    # config.fog_host       = 'https://assets.example.com'            # optional, defaults to nil
-    # config.fog_public     = false                                   # optional, defaults to true
+    config.fog_directory  = "images.sirihumor.me"                     # required
+    config.fog_host       =  "http://#{config.fog_directory}.s3.amazonaws.com" 
+    #config.fog_host       = 'http://images.sirihumor.me'            # optional, defaults to nil
+    config.fog_public     = true                                   # optional, defaults to true
     # config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
     config.cache_dir = "#{Rails.root}/tmp/uploads"
   end
