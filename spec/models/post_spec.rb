@@ -16,4 +16,8 @@ describe Post do
     specify { Post.active_posts.all.should =~ [@active_1, @active_2]}
 
   end
+
+  describe 'save attachment' do
+
+  end
 end

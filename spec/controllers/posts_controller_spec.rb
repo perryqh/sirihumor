@@ -23,13 +23,14 @@ describe PostsController do
   describe "POST create" do
     it "should create inactive post" do
       mail = Mail.new
-      mail.stub_chain(:attachments, :first).and_return(File.open('spec/testimage.gif'))
+      post1 = Factory.build(:post)
       Mail.should_receive(:new).and_return(mail)
+      Post.should_receive(:new).with(:active => false, :message => mail).and_return(post1)
+      post1.should_receive(:save).and_return(true)
 
       post :create
 
       response.should be_success
-      assigns(:post).active.should be_false
     end
 
     it "should render 404 if invalid message" do
