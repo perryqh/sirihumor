@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   require 'mail'
 
   def index
-    @posts = Post.active_posts.order(:created_at)
+    @posts = Post.active_posts.order('created_at DESC')
   end
 
   def create

@@ -16,7 +16,7 @@ describe PostsController do
 
       get :index
 
-      assigns(:posts).should == [@post2, @post4]
+      assigns(:posts).should == [@post4, @post2]
     end
   end
 
