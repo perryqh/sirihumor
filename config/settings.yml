@@ -1,5 +1,5 @@
 defaults: &defaults
-  attachment_email: contact@sirihumor.me
+  attachment_email: 8ed59fd2f47febe02622@cloudmailin.net
 
 development:
   <<: *defaults
