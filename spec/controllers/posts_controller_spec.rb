@@ -37,6 +37,7 @@ describe PostsController do
       post :create
 
       response.status.should == 404
+      response.body.should match /Screenshot can't be blank/
     end
   end
 end
