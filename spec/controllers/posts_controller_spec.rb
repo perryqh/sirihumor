@@ -21,19 +21,25 @@ describe PostsController do
   end
 
   describe "POST create" do
+    before(:each) do
+      @thanks = stub(:deliver => true)
+    end
+
     it "should create inactive post" do
       mail = stub
       post1 = Factory.build(:post)
       Mail.should_receive(:new).and_return(mail)
       Post.should_receive(:new).with(:active => true, :message => mail).and_return(post1)
       post1.should_receive(:save).and_return(true)
-
+      ThankYouMailer.should_receive(:success).and_return(@thanks)
       post :create
 
       response.should be_success
     end
 
     it "should render 404 if invalid message" do
+      ThankYouMailer.should_receive(:failure).and_return(@thanks)
+
       post :create
 
       response.status.should == 404

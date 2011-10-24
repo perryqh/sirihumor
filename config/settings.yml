@@ -1,5 +1,6 @@
 defaults: &defaults
   attachment_email: contact@mail.sirihumor.me
+  default_email_from: do-not-respond@mail.sirihumor.me
 
 development:
   <<: *defaults
