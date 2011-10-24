@@ -22,7 +22,7 @@ describe PostsController do
 
   describe "POST create" do
     it "should create inactive post" do
-      mail = Mail.new
+      mail = stub
       post1 = Factory.build(:post)
       Mail.should_receive(:new).and_return(mail)
       Post.should_receive(:new).with(:active => false, :message => mail).and_return(post1)

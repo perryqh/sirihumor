@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     if @post.save
       render :nothing => true, :status => 200
     else
-      render :nothing => true, :status => 404
+      render :text => @post.errors.full_messages, :status => 404
     end
   end
 end

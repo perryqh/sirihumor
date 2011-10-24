@@ -18,6 +18,15 @@ describe Post do
   end
 
   describe 'save attachment' do
+    require 'mail'
+    it "should set the attachment before validation" do
+      message = Mail.new
+      attachment = stub(:decoded => 'yahoo!', :filename => 'foo.png', :mime_type => 'png')
+      message.stub(:attachments => [attachment])
+      post = Factory.build(:post, :screenshot => nil, :message => message)
 
+      post.valid?.should be_true
+      post.screenshot.should_not be_nil
+    end
   end
 end
