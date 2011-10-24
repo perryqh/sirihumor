@@ -25,7 +25,7 @@ describe PostsController do
       mail = stub
       post1 = Factory.build(:post)
       Mail.should_receive(:new).and_return(mail)
-      Post.should_receive(:new).with(:active => false, :message => mail).and_return(post1)
+      Post.should_receive(:new).with(:active => true, :message => mail).and_return(post1)
       post1.should_receive(:save).and_return(true)
 
       post :create

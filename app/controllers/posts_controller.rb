@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def create
     message = Mail.new(params[:message])
-    @post = Post.new(:active => false, :message => message)
+    @post = Post.new(:active => true, :message => message)
 
     if @post.save
       render :nothing => true, :status => 200
