@@ -3,8 +3,10 @@ Siri Humor
 
 
 todo:
-1) incoming mms
-2) incoming email
-3) star review
-4) sort by review
-5) sort be recent
+- store from email
+- send "thank you email"
+- incoming mms
+- star review
+- cookie for storing votes
+- sort by review
+
