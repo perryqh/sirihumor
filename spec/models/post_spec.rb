@@ -22,11 +22,12 @@ describe Post do
     it "should set the attachment before validation" do
       message = Mail.new
       attachment = stub(:decoded => 'yahoo!', :filename => 'foo.png', :mime_type => 'png')
-      message.stub(:attachments => [attachment])
+      message.stub(:attachments => [attachment], :from => "charlie@brown.com")
       post = Factory.build(:post, :screenshot => nil, :message => message)
 
       post.valid?.should be_true
       post.screenshot.should_not be_nil
+      post.from_email.should == "charlie@brown.com"
     end
   end
 end
