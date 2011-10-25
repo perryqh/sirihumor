@@ -1,2 +1,2 @@
 - for post in @posts
-  = image_tag post.screenshot.url, :class => 'screenshot'
+  = image_tag post.screenshot.url, :class => 'screenshot', 'data-id' => post.id
