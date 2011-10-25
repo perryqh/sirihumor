@@ -7,11 +7,8 @@
     = csrf_meta_tags
 
   %body
-    .topbar
-      .topbar-inner
-        .container
-          %h1
-            = link_to('Siri Humor - Funny things Siri says', root_url)
+    = render :partial => 'layouts/topbar'
+            
     .container
       #content= yield
       .push

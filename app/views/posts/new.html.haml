@@ -1,0 +1,22 @@
+.form
+  
+  = form_for @post, :html => {:multipart => true} do |f|
+    %fieldset
+      %legend Submit Your Own Siri Screenshot
+      .clearfix
+        = f.label :screenshot
+        .input= f.file_field :screenshot, :class => 'input-file'
+        = f.hidden_field :screenshot_cache
+        = f.hidden_field :active, :value => true
+      .actions
+        = f.submit "Save", :class => 'btn primary'
+        = link_to('Cancel', root_url, :class => 'btn')
+
+  %h3 How do I take screenshot on my iPhone? 
+  %h4 Simultaneously hold down the Home and Sleep/Wake buttons, then release them together.
+
+  %h3 Is there another way to submit my screenshots?
+  %h4 
+    Yes. Email the screenshot as an attachment to 
+    = mail_to Settings.attachment_email
+    %span.dot .
