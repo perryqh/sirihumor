@@ -12,10 +12,10 @@ class PostsController < ApplicationController
 
     if @post.save
       ThankYouMailer.success(@post.from_email).deliver
-      render :nothing => true, :status => 200
     else
       ThankYouMailer.failure(@post.from_email, @post.errors.full_messages.join('. ') << '.').deliver
-      render :text => @post.errors.full_messages, :status => 404
     end
+    
+    render :nothing => true, :status => 200
   end
 end

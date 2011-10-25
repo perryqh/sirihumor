@@ -37,13 +37,12 @@ describe PostsController do
       response.should be_success
     end
 
-    it "should render 404 if invalid message" do
+    it "should send failure email and success status if invalid message" do
       ThankYouMailer.should_receive(:failure).and_return(@thanks)
 
       post :create
 
-      response.status.should == 404
-      response.body.should match /Screenshot can't be blank/
+      response.should be_success
     end
   end
 end
