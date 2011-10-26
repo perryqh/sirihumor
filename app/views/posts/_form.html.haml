@@ -3,7 +3,9 @@
     %fieldset
       %legend Submit Your Own Siri Screenshot
       - unless @post.errors.empty?
-        .alert-message.error.fade.in{'data-alert' => '1'}= (@post.errors.full_messages.join('. ') << '.')
+        .alert-message.error.fade.in{'data-alert' => 'alert'}
+          %a.close{:href => '#'} x
+          %p= (@post.errors.full_messages.join('. ') << '.')
       
       .clearfix
         = f.label :screenshot
