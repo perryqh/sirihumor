@@ -9,7 +9,7 @@ body > .container
   height: auto !important
   height: 100%
   margin: 0 auto -4em
-  padding-top: 75px
+  padding-top: 150px
 
 .topbar-inner h1
   margin: 10px 0
@@ -26,6 +26,15 @@ footer
   
 h2 span.dot
   margin-left: -15px
+h1.icon
+  margin: 0
+  > a
+    background: url(<%= asset_path 'happy.png' %>) no-repeat 0 -15px
+    float: left
+    padding: 53px 0 17px 115px
+    &:hover
+      text-decoration: none
+      color: #fff
   
 span.dot
   margin-left: -4px
@@ -39,14 +48,15 @@ img.screenshot
     color: rgb(102, 102, 102)
     margin-bottom: 30px
 
-.topbar li#new_post
-  margin-left: 50px
+.topbar ul.pills
+  margin: 53px 0 0 190px
 
 ol.email-instructions
   font-size: 1.5em
   li
     line-height: 20px
     margin-bottom: 10px
+
 
 
   
