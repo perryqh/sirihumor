@@ -2,6 +2,9 @@
   = form_for @post, :html => {:multipart => true} do |f|
     %fieldset
       %legend Submit Your Own Siri Screenshot
+      - unless @post.errors.empty?
+        .alert-message.error.fade.in{'data-alert' => '1'}= (@post.errors.full_messages.join('. ') << '.')
+      
       .clearfix
         = f.label :screenshot
         .input= f.file_field :screenshot, :class => 'input-file'
