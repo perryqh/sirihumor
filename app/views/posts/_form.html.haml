@@ -1,0 +1,17 @@
+.form
+  = form_for @post, :html => {:multipart => true} do |f|
+    %fieldset
+      %legend Submit Your Own Siri Screenshot
+      .clearfix
+        = f.label :screenshot
+        .input= f.file_field :screenshot, :class => 'input-file'
+        = f.hidden_field :screenshot_cache
+        = f.hidden_field :active, :value => true
+      .actions
+        = f.submit "Save", :class => 'btn primary'
+        = link_to('Cancel', root_url, :class => 'btn')
+
+  %h4 
+    You can also email the screenshot as an attachment to 
+    = mail_to Settings.attachment_email
+    %span.dot .
