@@ -3,10 +3,13 @@ development:
   encoding: unicode
   database: sirihumor_development
   hostname: localhost
-
+  username: postgres
+  password: postgres
 test: &test
   adapter: postgresql
   encoding: unicode
   database: sirihumor_test
   hostname: localhost
+  username: postgres
+  password: postgres
   

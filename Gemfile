@@ -36,7 +36,7 @@ group :test do
   gem 'remarkable_activemodel',   '>=4.0.0.alpha4'
   gem 'remarkable_activerecord',  '>=4.0.0.alpha4'
   gem 'database_cleaner',      '>= 0.6.7'
-  gem 'capybara-webkit',       '>= 0.7.2'
+  gem 'capybara',              '>= 1.1.1'
 end
 
 unless ENV["TRAVIS"]
