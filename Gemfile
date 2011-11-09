@@ -23,14 +23,14 @@ group :assets do
   gem 'uglifier',              "~> 1.0.3"
 end
 
-gem 'jquery-rails',            "~> 1.0.13"
+gem 'jquery-rails',            "~> 1.0.16"
 
 group :test do
   gem 'rspec-rails',           '>= 2.7.0'
   gem 'factory_girl_rails',    '>= 1.2.0'
   gem 'turn',                  :require => false
-  gem 'guard-rspec',           '>= 0.4.3'
-  gem 'guard-spork',           '>= 0.2.1'
+  gem 'guard-rspec',           '>= 0.5.2'
+  gem 'guard-spork',           '>= 0.3.1'
   gem "spork",                 '>= 0.9.0.rc9'
   gem 'remarkable',               '>=4.0.0.alpha4'
   gem 'remarkable_activemodel',   '>=4.0.0.alpha4'
