@@ -40,8 +40,8 @@ group :test do
 end
 
 unless ENV["TRAVIS"]
+  gem 'ruby-debug19', :group => [:development, :test]
   group :test do
-    gem 'ruby-debug19', :require => nil
     gem 'rb-fsevent', :require => false
   end
 end
