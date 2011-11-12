@@ -25,3 +25,7 @@ guard 'rspec', :version => 2, :cli => "--color --format nested --drb --tag ~slow
   watch(%r{^app/views/(.+)/})                        { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
 
+guard 'bundler' do
+  watch('Gemfile')
+end
+

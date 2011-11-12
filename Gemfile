@@ -31,6 +31,7 @@ group :test do
   gem 'turn',                  :require => false
   gem 'guard-rspec',           '>= 0.5.2'
   gem 'guard-spork',           '>= 0.3.1'
+  gem 'guard-bundler',            '>= 0.1.3'
   gem "spork",                 '>= 0.9.0.rc9'
   gem 'remarkable',               '>=4.0.0.alpha4'
   gem 'remarkable_activemodel',   '>=4.0.0.alpha4'
